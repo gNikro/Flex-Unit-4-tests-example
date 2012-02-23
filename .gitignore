@@ -8,6 +8,7 @@
 .idea
 **/.idea/*.*
 .svn
+.db
 .iml
 *.iml
 **/*.as3proj
@@ -38,6 +39,8 @@ build
 **/build/*.*
 target
 **/target/*.*
+**/svn/*.*
+
 
 
 
@@ -66,3 +69,4 @@ target
 ehthumbs.db
 Icon?
 Thumbs.db
+.db
