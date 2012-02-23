@@ -1,15 +1,17 @@
 package example.model 
 {
 	
+
+	import flash.events.Event;
+	import flash.events.EventDispatcher;
+	import flash.events.IEventDispatcher;
+	
 	/**
 	 * Ивент об изменении данных модели
 	 * @eventType	flash.events.Event.CHANGE
 	 */
 	[Event(name="change", type="flash.events.Event")] 
 	
-	import flash.events.Event;
-	import flash.events.EventDispatcher;
-	import flash.events.IEventDispatcher;
 	
 	/**
 	 * Модель списка фильмов - объект содержаший в себе данные нужные для работы списка фильмов
