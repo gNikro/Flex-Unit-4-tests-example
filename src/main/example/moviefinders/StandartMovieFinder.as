@@ -5,21 +5,27 @@ package example.moviefinders
 
 	
 	/**
-	 * ...
-	 * @author 
+	 * Класс реализующий интерфейс <code>IMovieFinder</code>
+	 * Служаший для поиска списка фильмов каким то образом
+	 * 
+	 * @see example.model.Movie
+	 * 
+	 * @see FakeMovieFinder
+	 * @see IMovieFinder
+	 * 
+	 * @author Nikro
 	 */
 	public class StandartMovieFinder implements IMovieFinder 
 	{
-		
-		
 		
 		public function StandartMovieFinder() 
 		{
 			
 		}
 		
-		/* INTERFACE example.moviefiners.IMovieFinder */
-		
+		/**
+		 * @inheritDoc
+		 */
 		public function getMovies():Vector.<Movie> 
 		{
 			var list:Vector.<Movie> = new Vector.<Movie>;

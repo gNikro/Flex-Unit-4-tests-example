@@ -32,7 +32,8 @@
 
 
 			<configuration>
-
+				
+				
                 <compilerWarnings>
                     <warn-no-constructor>false</warn-no-constructor>
                 </compilerWarnings>
@@ -120,6 +121,13 @@
             <enabled>false</enabled>
          </snapshots>
       </repository>
+
+       <repository>
+           <id>apache-internal-repository</id>
+           <url>https://repository.apache.org/content/repositories/maven-014/</url>
+           <releases> <enabled>true</enabled> </releases>
+           <snapshots> <enabled>true</enabled> </snapshots>
+       </repository>
    </repositories>
    <pluginRepositories>
       <pluginRepository>

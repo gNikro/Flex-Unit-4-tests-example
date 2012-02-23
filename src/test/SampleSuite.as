@@ -10,7 +10,7 @@ package
 	import example.movieLister.MovieListerTest;
 	
 	
-	[Suite]
+	[Suite] 
 	[RunWith("org.flexunit.runners.Suite")]
 	public class SampleSuite
 	{

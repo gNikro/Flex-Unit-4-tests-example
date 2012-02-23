@@ -5,7 +5,7 @@ package example
 	import flash.text.TextFieldAutoSize;
 	
 	/**
-	 * ...
+	 * Простая кнопка
 	 * @author 
 	 */
 	public class Button extends Sprite 

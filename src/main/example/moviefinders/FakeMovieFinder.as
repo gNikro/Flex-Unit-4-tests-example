@@ -2,8 +2,15 @@ package example.moviefinders
 {
 	import example.model.Movie;
 	/**
-	 * ...
-	 * @author 
+	 * Класс реализующий интерфейс <code>IMovieFinder</code>
+	 * Служаший для поиска списка фильмов каким то образом
+	 * 
+	 * @see example.model.Movie
+	 * 
+	 * @see StandartMovieFinder
+	 * @see IMovieFinder
+	 * 
+	 * @author Nikro
 	 */
 	public class FakeMovieFinder implements IMovieFinder 
 	{
@@ -13,8 +20,9 @@ package example.moviefinders
 			
 		}
 		
-		/* INTERFACE example.moviefinders.IMovieFinder */
-		
+		/**
+		 * @inheritDoc
+		 */
 		public function getMovies():Vector.<Movie> 
 		{
 			var list:Vector.<Movie> = new Vector.<Movie>;

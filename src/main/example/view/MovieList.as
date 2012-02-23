@@ -5,8 +5,9 @@ package example.view
 	import flash.events.Event;
 	
 	/**
-	 * ...
-	 * @author 
+	 * Вью компонент - список отображаемых фильмов
+	 * 
+	 * @author Nikro
 	 */
 	public class MovieList extends Sprite 
 	{
@@ -16,6 +17,10 @@ package example.view
 		
 		private var _listElements:Vector.<MovieListElement>
 		
+		/**
+		 * 
+		 * @param	model модель содержащая необходимые данные
+		 */
 		public function MovieList(model:MovieListModel) 
 		{
 			super();
@@ -24,6 +29,11 @@ package example.view
 			initilize();
 		}
 		
+		/**
+		 * Делает текстовые поля изменяемыми или нет.<br/>
+		 * Если задано <code>true</code> то все текстовые поля становятся
+		 * изменяемыми если <code>false</code> то все поля не изменяемы
+		 */
 		public function set editable(value:Boolean):void
 		{
 			_editable = value;
@@ -34,6 +44,9 @@ package example.view
 			}
 		}
 		
+		/**
+		 * Список компонентов содержашихся в листе
+		 */
 		public function get listElements():Vector.<MovieListElement> 
 		{
 			return _listElements;

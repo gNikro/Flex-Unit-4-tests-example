@@ -2,13 +2,11 @@ package
 {
 	import example.Button;
 	import example.controller.MovieListController;
+	import flash.display.Sprite;
+	import flash.events.Event;
 	import flash.events.MouseEvent;
 	import help.MoviesModelsEditor;
 
-	import flash.display.Sprite;
-	import flash.events.Event;
-	import flash.text.TextField;
-	import flash.text.TextFieldAutoSize;
 	
 	/**
 	 * ...

@@ -8,8 +8,10 @@ package example.view
 	import flash.text.TextFieldType;
 	
 	/**
-	 * ...
-	 * @author 
+	 * Визуальный компонент списка фильмов
+	 * Показывает информацию о каждом фильме
+	 * и может ее изменять
+	 * @author Nikro
 	 */
 	public class MovieListElement extends Sprite 
 	{
@@ -20,6 +22,10 @@ package example.view
 		private var movieLable:TextField;
 		private var dectiptionLable:TextField;
 		
+		/**
+		 * 
+		 * @param	movie модель содержашая данные о фильме
+		 */
 		public function MovieListElement(movie:Movie = null) 
 		{
 			super();
@@ -28,6 +34,9 @@ package example.view
 			initilize();
 		}
 		
+		/**
+		 * Выставляет данные из полей записанных в компаненте в соответствующие поля в модели
+		 */
 		public function submitDataToModel():void
 		{
 			movie.movieName = movieName.text;
@@ -35,6 +44,9 @@ package example.view
 			movie.change();
 		}
 		
+		/**
+		 * Очищяет визуальные данные компонента
+		 */
 		public function clear():void
 		{
 			movieName.text = '';
@@ -42,6 +54,11 @@ package example.view
 			movie = null;
 		}
 		
+		/**
+		 * Задает новую модель, при этом отписывается от старой и подписывается на новую
+		 * чтобы отслеживать изменения
+		 * @param	model
+		 */
 		public function setMovie(model:Movie):void
 		{
 			initModel(model);
@@ -119,6 +136,9 @@ package example.view
 			movieDecription.text = movie.movieDescription;
 		}
 		
+		/**
+		 * Параметр означающий изменяемые ли поля компонента или нет
+		 */
 		public function get editable():Boolean 
 		{
 			return _editable;
