@@ -1,0 +1,30 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+   <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>hof</groupId>
+        <artifactId>houseoffun</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+   <groupId>hof.houseoffun</groupId>
+   <artifactId>tests</artifactId>
+   <version>1.0.0</version>
+   <packaging>pom</packaging>
+   <name>tests</name>
+
+    <dependencies>
+        <dependency>
+            <type>swc</type>
+            <version>1.1.0</version>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-as3</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+   
+</project>
