@@ -1,6 +1,7 @@
 package example.moviefinders 
 {
 	import org.hamcrest.assertThat;
+	import org.hamcrest.collection.arrayWithSize;
 	import org.hamcrest.core.not;
 	import org.hamcrest.object.equalTo;
 	/**
@@ -23,6 +24,9 @@ package example.moviefinders
 		[Test]
 		public function testGetMovies():void
 		{
+			//hamcrest smart test example with array match
+			assertThat(fakeMovieFinder.getMovies(), arrayWithSize(10));
+			
 			assertThat('the FakeMovieFinder should provide 10 elements on getMovies', fakeMovieFinder.getMovies().length , equalTo(10));
 		}
 		

@@ -36,8 +36,6 @@
         и параметры свф файла типа размеры, фрем рейт, и тд.
     -->
     <properties>
-        <hamcrestPatch>D:\hellowmojo\lib\hamcrest-as3-1.1.0.swc</hamcrestPatch>
-
         <flex.sdk.version>4.5.1.21328</flex.sdk.version>
         <flexmojos.version>4.0-RC2</flexmojos.version>
 
@@ -70,7 +68,6 @@
         -->
         <sourceDirectory>.\src\main</sourceDirectory>
         <testSourceDirectory>.\src\test</testSourceDirectory>
-
         <!--
             Build Plugins Section
             Используемые плагины при билде проекта
@@ -236,17 +233,12 @@
 
 
     <dependencies>
-        <!--
-            задал hamcrest либу в ручную указав абсалютный путь на диске
-            к библиотеке лучше конечно проинсталить ее для Maven
-        -->
         <dependency>
             <type>swc</type>
             <version>1.1.0</version>
-            <groupId>hamcrest</groupId>
-            <artifactId>hamcrest</artifactId>
-            <systemPath>${hamcrestPatch}</systemPath>
-            <scope>system</scope>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-as3</artifactId>
+            <scope>test</scope>
         </dependency>
 
         <!-- Nice POM bundle available per SDK on Sonatype thanks to Flex-Mojos -->

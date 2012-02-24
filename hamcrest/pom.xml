@@ -1,0 +1,114 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <!--
+        Этот пом инсталит либу hamcrest-as3
+        версии 1.1.0
+
+        Так как компилятор не подхватывает swc файлы
+        в случае компиляции мваен если они не заданы в
+        dependency то и поулчившаяся либа будет пустая
+        поэтому оригнальную либу нужно будет все же руками скопировать в репозиторий
+        но вообще лучше руками проинсталить в таком случае либу
+    -->
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.hamcrest</groupId>
+    <artifactId>hamcrest-as3</artifactId>
+    <version>1.1.0</version>
+    <packaging>swc</packaging>
+    <name>hamcrest-as3</name>
+
+    <build>
+        <sourceDirectory>./</sourceDirectory>
+
+
+
+        <plugins>
+            <plugin>
+                <!--
+                    Флекс моджо плагин
+                -->
+
+                <groupId>org.sonatype.flexmojos</groupId>
+                <artifactId>flexmojos-maven-plugin</artifactId>
+                <version>4.0-RC2</version>
+                <extensions>true</extensions>
+
+                <configuration>
+
+                    <compilerWarnings>
+                        <warn-no-constructor>false</warn-no-constructor>
+                    </compilerWarnings>
+
+                    <as3>true</as3>
+
+                    <!--
+                        задает mxmlc компилятору параметр compress
+                    -->
+                    <compress>true</compress>
+                    <optimize>true</optimize>
+
+                    <!--
+                        Далее идут параметры выходного swf файла
+                        в этом случае они берутся из параметров заданных выше
+                    -->
+                </configuration>
+
+                <!--
+                    Зависимости текущего плагина
+                -->
+                <dependencies>
+                    <!-- Nice POM bundle available per SDK on Sonatype thanks to Flex-Mojos -->
+                    <!-- Эта зависимость связывет флекс моджо с mxmlc компилятором -->
+                    <dependency>
+                        <groupId>com.adobe.flex</groupId>
+                        <artifactId>compiler</artifactId>
+                        <version>4.5.1.21328</version>
+                        <type>pom</type>
+                    </dependency>
+                </dependencies>
+
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.adobe.flex.framework</groupId>
+            <artifactId>flex-framework</artifactId>
+            <version>4.5.1.21328</version>
+            <type>pom</type>
+        </dependency>
+
+
+    </dependencies>
+    <repositories>
+        <repository>
+            <id>flex-mojos-repository</id>
+            <url>http://repository.sonatype.org/content/groups/flexgroup</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>flex-mojos-plugin-repository</id>
+            <url>http://repository.sonatype.org/content/groups/flexgroup</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+
+
+</project>
