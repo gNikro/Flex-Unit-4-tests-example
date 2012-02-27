@@ -22,9 +22,9 @@
         например scm:svn, scm:git
     -->
     <scm>
-        <url>scm:svn:http://svn.triplecstudios.org/house_of_fun/${scm_working_branch}/</url>
-        <connection>scm:svn:http://svn.triplecstudios.org/house_of_fun/${scm_working_branch}/</connection>
-        <developerConnection>scm:svn:http://svn.triplecstudios.org/house_of_fun/${scm_working_branch}/</developerConnection>
+        <url>${scm_url}/${scm_working_branch}/</url>
+        <connection>${scm_url}/${scm_working_branch}/</connection>
+        <developerConnection>${scm_url}/${scm_working_branch}/</developerConnection>
     </scm>
 
     <!--
@@ -36,9 +36,16 @@
         и параметры свф файла типа размеры, фрем рейт, и тд.
     -->
     <properties>
-        <flex.flashPlayer.command>D:\flashplayer\flashplayer_${flashProperties.playerVersion}_sa_debug</flex.flashPlayer.command>
 
+        <scm_url>scm:svn:http://foo.bar</scm_url>
         <scm_working_branch>none</scm_working_branch>
+
+        <flashplayerPath>D:\flashplayer\</flashplayerPath>
+        <flashplayerName>flashplayer_${flashProperties.playerVersion}_sa_debug</flashplayerName>
+
+        <flex.flashPlayer.command>${flashplayerPath}${flashplayerName}</flex.flashPlayer.command>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
         <flex.sdk.version>4.5.1.21328</flex.sdk.version>
         <flexmojos.version>4.0-RC2</flexmojos.version>
 
@@ -48,6 +55,8 @@
         <flashProperties.swfVersion>10</flashProperties.swfVersion>
         <flashProperties.playerVersion>10</flashProperties.playerVersion>
         <flashProperties.framerate>31</flashProperties.framerate>
+			
+		<flashProperties.backgroundColor>0xFFFFFF</flashProperties.backgroundColor>
     </properties>
 
     <!--
@@ -93,8 +102,9 @@
                         В данном случае оно состоит из ProjectName и buildNumber
                         например выходной файл может выглядеть так
                         myFlexMojosProject_1.22.02.1856.swf
+						  <finalName>${project.name}_${buildNumber}</finalName>
                      -->
-                    <finalName>${project.name}_${buildNumber}</finalName>
+                  
 
                     <!--
                         Включить/выключить варнинги mxmlc компилятора
@@ -135,7 +145,9 @@
                         в этом случае они берутся из параметров заданных выше
                     -->
                     <defaultFrameRate>${flashProperties.frameRate}</defaultFrameRate>
-
+					
+					<defaultBackgroundColor>${flashProperties.backgroundColor}</defaultBackgroundColor>
+					
                     <defaultSize>
                         <width>${flashProperties.width}</width>
                         <height>${flashProperties.height}</height>

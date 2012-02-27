@@ -1,0 +1,15 @@
+<report>
+  <scripts>
+    <script name="_e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855_flash_display_Sprite.as" mod="1330353967696" size="1095" optimizedsize="562">
+      <def id="_e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855_flash_display_Sprite" />
+      <pre id="flash.display:Sprite" />
+      <dep id="flash.system:Security" />
+      <dep id="AS3" />
+    </script>
+  </scripts>
+  <external-defs>
+    <ext id="AS3" />
+    <ext id="flash.system:Security" />
+    <ext id="flash.display:Sprite" />
+  </external-defs>
+</report>

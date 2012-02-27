@@ -10,10 +10,12 @@ package example
 	 */
 	public class Button extends Sprite 
 	{
+		public var lable:String;
 		
 		public function Button(lable:String) 
 		{
 			super();
+			this.lable = lable;
 			var tf:TextField = new TextField();
 			tf.border = true;
 			tf.text = lable;

@@ -17,6 +17,7 @@
    <name>houseoffun</name>
 
    <properties>
+       <scm_url>scm:svn:http://svn.triplecstudios.org/house_of_fun</scm_url>
        <scm_working_branch>trunk</scm_working_branch>
    </properties>
 

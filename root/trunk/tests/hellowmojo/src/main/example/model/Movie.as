@@ -67,6 +67,10 @@ package example.model
 			
 		}
 		
+		override public function toString():String 
+		{
+			return "[Movie movieDescription=" + movieDescription + " movieName=" + movieName + "]";
+		}
 	}
 
 }

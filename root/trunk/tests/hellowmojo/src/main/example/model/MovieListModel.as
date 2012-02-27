@@ -33,6 +33,11 @@ package example.model
 			initilize();
 		}
 		
+		public function getRawData():String
+		{
+			return _listOfMovies.toString();
+		}
+		
 		private function initilize():void 
 		{
 			_listOfMovies = new Vector.<Movie>;

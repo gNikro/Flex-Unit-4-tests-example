@@ -39,6 +39,9 @@ package example.view
 		 */
 		public function submitDataToModel():void
 		{
+			if(!movie)
+				return;
+				
 			movie.movieName = movieName.text;
 			movie.movieDescription = movieDecription.text;
 			movie.change();

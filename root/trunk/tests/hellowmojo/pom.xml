@@ -15,6 +15,25 @@
    <version>1.0.0</version>
    <packaging>swf</packaging>
    <name>hellowmojo</name>
+   
+   <dependencies>
+
+       <dependency>
+           <groupId>com.greensock</groupId>
+           <artifactId>greensock</artifactId>
+           <version>1.0.0</version>
+           <type>swc</type>
+       </dependency>
+
+       <dependency>
+           <artifactId>flcomponents</artifactId>
+           <version>1.0.0</version>
+           <groupId>flcomponents</groupId>
+           <type>swc</type>
+       </dependency>
+   </dependencies>
+
+
 
    
 </project>

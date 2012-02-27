@@ -2,6 +2,8 @@ package
 {
 	import demo.AssertTest;
 	import demo.SampleTest;
+	import example.io.PublishToClipboardTest;
+	import example.io.PublishToFileTest;
 	import help.MoviesModelsEditorTest;
 	import example.controller.MovieListControllerTest;
 	import example.model.MovieListModelTest;
@@ -27,6 +29,9 @@ package
 		public var movieListEditor:MoviesModelsEditorTest;
 		
 		public var movieListMOdel:MovieListModelTest;
+		
+		public var publishTestFile:PublishToFileTest;
+		public var publishTestClipboard:PublishToClipboardTest;
 	}
 
 }
