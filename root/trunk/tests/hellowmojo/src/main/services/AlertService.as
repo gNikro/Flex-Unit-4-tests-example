@@ -1,6 +1,5 @@
 package services 
 {
-	import com.greensock.TweenLite;
 	import flash.display.DisplayObjectContainer;
 	import flash.utils.Dictionary;
 	import ui.Alert;
@@ -37,7 +36,7 @@ package services
 			
 			viewInstance.addChild(alert);
 			alert.alpha = 50;
-			TweenLite.to(alert, 5, { alpha:1, onComplete:Delegate.create(removeAlert, alert) } );
+			//TweenLite.to(alert, 5, { alpha:1, onComplete:Delegate.create(removeAlert, alert) } );
 			
 			alert.x = (viewInstance.width - alert.width) / 2;
 			

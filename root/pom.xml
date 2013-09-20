@@ -40,8 +40,8 @@
         <scm_url>scm:svn:http://foo.bar</scm_url>
         <scm_working_branch>none</scm_working_branch>
 
-        <flashplayerPath>D:\flashplayer\</flashplayerPath>
-        <flashplayerName>flashplayer_${flashProperties.playerVersion}_sa_debug</flashplayerName>
+        <flashplayerPath>C:\Program Files (x86)\FlashDevelop\Tools\flexsdk\runtimes\player\</flashplayerPath>
+        <flashplayerName>${flashProperties.playerVersion}\win\FlashPlayerDebugger.exe</flashplayerName>
 
         <flex.flashPlayer.command>${flashplayerPath}${flashplayerName}</flex.flashPlayer.command>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -53,7 +53,7 @@
         <flashProperties.height>600</flashProperties.height>
 
         <flashProperties.swfVersion>10</flashProperties.swfVersion>
-        <flashProperties.playerVersion>10</flashProperties.playerVersion>
+        <flashProperties.playerVersion>11.1</flashProperties.playerVersion>
         <flashProperties.framerate>31</flashProperties.framerate>
 			
 		<flashProperties.backgroundColor>0xFFFFFF</flashProperties.backgroundColor>
